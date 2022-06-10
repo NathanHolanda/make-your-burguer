@@ -1,0 +1,94 @@
+{
+  "ingredients": {
+    "breads": [
+      {
+        "id": 1,
+        "type": "Italiano branco"
+      },
+      {
+        "id": 2,
+        "type": "3 queijos"
+      },
+      {
+        "id": 3,
+        "type": "Parmesão e orégano"
+      },
+      {
+        "id": 4,
+        "type": "Integral"
+      }
+    ],
+    "meats": [
+      {
+        "id": 1,
+        "type": "Maminha"
+      },
+      {
+        "id": 2,
+        "type": "Alcatra"
+      },
+      {
+        "id": 3,
+        "type": "Picanha"
+      },
+      {
+        "id": 4,
+        "type": "Vegana"
+      }
+    ],
+    "additional": [
+      {
+        "id": 1,
+        "type": "Bacon"
+      },
+      {
+        "id": 2,
+        "type": "Cheddar"
+      },
+      {
+        "id": 3,
+        "type": "Salame"
+      },
+      {
+        "id": 4,
+        "type": "Tomate"
+      },
+      {
+        "id": 5,
+        "type": "Cebola roxa"
+      },
+      {
+        "id": 6,
+        "type": "Pepino"
+      }
+    ]
+  },
+  "status": [
+    {
+      "id": 1,
+      "type": "Solicitado"
+    },
+    {
+      "id": 2,
+      "type": "Em produção"
+    },
+    {
+      "id": 3,
+      "type": "Finalizado"
+    }
+  ],
+  "burgers": [
+    {
+      "name": "Nathan",
+      "bread": "3 queijos",
+      "meat": "Picanha",
+      "additional": [
+        "Bacon",
+        "Salame",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    }
+  ]
+}

@@ -13,8 +13,27 @@
   }
 
   .main-container{
+    background-color: rgb(235, 235, 235);
+    color: #333;
     margin: 50px;
     min-height: 250px;
+  }
+
+  input, option, textarea{
+    color: #333;
+  }
+
+  select{
+    color: #777;
+  }
+
+  .container-title{
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  input::placeholder{
+    color: #777;
   }
 </style>
 
