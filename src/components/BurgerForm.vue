@@ -1,7 +1,7 @@
 <template>
-  <p>Mensagem</p>
   <div class="container">
     <form @submit="createBurger">
+      <Message :message="message" :type="messageType"/>
       <div class="input-container">
         <label class="input-container-label" for="name"
           >Nome do cliente:
@@ -63,7 +63,13 @@
 </template>
 
 <script>
+import Message from "./Message.vue"
+
 export default {
+  components: {
+    Message
+  },
+
   data() {
     return {
       breads: null,
@@ -74,9 +80,11 @@ export default {
       meat: "",
       chosen_additional: [],
       status: "Solicitado",
-      message: ""
+      message: "",
+      messageType: ""
     };
   },
+
   methods: {
     async getIngredients() {
       const response = await fetch("http://localhost:3000/ingredients");
@@ -99,24 +107,46 @@ export default {
     async createBurger(event){
       event.preventDefault()
 
-      const data = JSON.stringify({
+      const order = {
         name: this.name,
         bread: this.bread,
         meat: this.meat,
         additional: this.chosen_additional,
         status: this.status
-      })
+      }
 
-      await fetch("http://localhost:3000/burgers", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: data
-      })   
+      const inputs = Object.values(order)
+      const hasEmptyInput = inputs.some(input => input === "")
+
+      if(hasEmptyInput){
+        this.message = "ERRO: Preencha todos os campos."
+        this.messageType = "error"
+
+        setTimeout(() => this.message = "", 3000)
+      }else{
+        const data = JSON.stringify(order)
+
+        const response = await fetch("http://localhost:3000/burgers", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: data
+        })
+
+        if(response.status === 201){
+            const data = await response.json()
+
+            this.name = ""
+            this.bread = ""
+            this.meat = ""
+            this.chosen_additional.length = 0
+
+            this.message = `Pedido nº ${data.id} realizado!`
+            this.type = "success"
+
+            setTimeout(() => this.message = "", 3000)
+        }
+      }
       
-      this.name = ""
-      this.bread = ""
-      this.meat = ""
-      this.chosen_additional.length = 0
     }
   },
 
