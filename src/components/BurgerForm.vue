@@ -8,7 +8,6 @@
         </label>
         <input
           id="name"
-          name="name"
           v-model="name"
           type="text"
           placeholder="Digite o nome do cliente"
@@ -18,7 +17,7 @@
         <label class="input-container-label" for="bread"
           >Tipo de pão:
         </label>
-        <select id="bread" name="bread" v-model="bread" @change="changeSelectColor">
+        <select id="bread" v-model="bread" @change="changeSelectColor">
           <option value="" hidden selected disabled>
             Selecione o tipo de pão...
           </option>
@@ -31,7 +30,7 @@
         <label class="input-container-label" for="meat"
           >Tipo de carne:
         </label>
-        <select id="meat" name="meat" v-model="meat" @change="changeSelectColor">
+        <select id="meat" v-model="meat" @change="changeSelectColor">
           <option value="" hidden selected disabled>
             Selecione o tipo de carne...
           </option>
@@ -46,7 +45,6 @@
           <div v-for="additional in all_additional" :key="additional.id" class="checkbox-container">
             <input
               type="checkbox"
-              name="chosen_additional"
               v-model="chosen_additional"
               :id="additional.type"
               :value="additional.type"

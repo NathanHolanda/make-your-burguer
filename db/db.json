@@ -77,58 +77,5 @@
       "type": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "name": "Nathan",
-      "bread": "3 queijos",
-      "meat": "Picanha",
-      "additional": [
-        "Bacon",
-        "Salame",
-        "Pepino"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "name": "Nathan",
-      "bread": "3 queijos",
-      "meat": "Alcatra",
-      "additional": [
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "name": "Nathan",
-      "bread": "Integral",
-      "meat": "Vegana",
-      "additional": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "name": "Nathan",
-      "bread": "Parmesão e orégano",
-      "meat": "Picanha",
-      "additional": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "name": "Astolfo Antunes",
-      "bread": "Parmesão e orégano",
-      "meat": "Vegana",
-      "additional": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 5
-    }
-  ]
+  "burgers": []
 }
