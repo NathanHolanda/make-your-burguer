@@ -77,5 +77,19 @@
       "type": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "name": "Nathan",
+      "bread": "3 queijos",
+      "meat": "Picanha",
+      "additional": [
+        "Cheddar",
+        "Salame",
+        "Bacon",
+        "Tomate"
+      ],
+      "status": "Finalizado",
+      "id": 1
+    }
+  ]
 }

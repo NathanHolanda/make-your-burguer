@@ -119,8 +119,6 @@ export default {
       if(hasEmptyInput){
         this.message = "ERRO: Preencha todos os campos."
         this.messageType = "error"
-
-        setTimeout(() => this.message = "", 3000)
       }else{
         const data = JSON.stringify(order)
 
@@ -139,12 +137,17 @@ export default {
             this.chosen_additional.length = 0
 
             this.message = `Pedido nº ${data.id} realizado!`
-            this.type = "success"
-
-            setTimeout(() => this.message = "", 3000)
+            this.messageType = "success"
         }
       }
       
+    }
+  },
+
+  watch: {
+    message(){
+      if(this.message)
+        setTimeout(() => this.message = "", 3000)
     }
   },
 
@@ -162,7 +165,6 @@ export default {
 }
 
 form {
-  margin-top: 50px;
   max-width: 400px;
   width: 100%;
 }
@@ -213,6 +215,7 @@ input[type="checkbox"] {
   background-color: #222;
   padding: 15px 60px;
   font-size: 1.2rem;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   color: #fcba03;

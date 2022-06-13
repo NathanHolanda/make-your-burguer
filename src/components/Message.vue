@@ -13,9 +13,10 @@ export default {
 
 <style scoped>
 .container {
-    margin: 10px 0;
+    margin: 10px auto;
     padding: 15px 10px;
     border-radius: 4px;
+    max-width: 450px;
 }
 
 .success{
@@ -28,6 +29,12 @@ export default {
     color: #aa2233;
     border: #ff8899 solid 1px;
     background-color: #ffbbcc;
+}
+
+.info{
+    color: #2233aa;
+    border: #8899ff solid 1px;
+    background-color: #bbccff;
 }
 
 .container p{

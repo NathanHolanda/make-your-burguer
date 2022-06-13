@@ -30,6 +30,7 @@
   .container-title{
     text-align: center;
     font-size: 2.2rem;
+    margin-bottom: 50px;
   }
 
   input::placeholder{
